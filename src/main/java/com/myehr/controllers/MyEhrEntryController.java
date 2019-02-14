@@ -34,18 +34,7 @@ public class MyEhrEntryController {
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public ModelAndView checkLogin(@RequestParam(value = "error",required = false) String error,
                                    @RequestParam(value = "logout",	required = false) String logout,
-                                   @RequestParam Map<String, String> modelR){
-        String userNAme=modelR.get("username");
-        String password=modelR.get("password");
-        System.out.println("user:  "+modelR.get("username"));
-        System.out.println("password:  "+modelR.get("password"));
-        ModelAndView model=new ModelAndView();
-        if(userNAme.equalsIgnoreCase("arun")&&
-                password.equalsIgnoreCase("sebastian")){
-            model.addObject("greeting","Welcome");
-            model.addObject("user",userNAme);
-        }else{
-            model.addObject("greeting",MessageConstants.indexMsg);
+                                   @RequestParam Map<String, String> modelR){770ki
             model.addObject("user","invalid");
         }
 
@@ -59,6 +48,15 @@ public class MyEhrEntryController {
 
         model.setViewName("welcome");
         return model;
+    }
+
+
+    @RequestMapping(value="/register")
+    public ModelAndView registerFormNav(){
+        ModelAndView mav = new ModelAndView();
+
+        mav.setViewName("register");
+        return mav;
     }
 
    /* @RequestMapping(method = RequestMethod.GET)
