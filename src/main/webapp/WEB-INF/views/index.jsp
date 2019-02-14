@@ -39,7 +39,7 @@
             	<td colspan='2'><input name="submit" type="submit" value="submit" /></td>
             </tr>
             <tr>
-                <td><a href="<c:url value='/register' />"> Register </td>
+                <td><a href="<c:url value='/register'/>"> Register </td>
             </tr>
           </table>
           <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />

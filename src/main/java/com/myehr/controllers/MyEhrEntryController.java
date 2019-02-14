@@ -66,11 +66,11 @@
     public String sayHello(ModelMap model) {
         model.addAttribute("greeting", "Hello World from Spring 4 MVC");
         return "welcome";
-    }
+    }*/
 
-    @RequestMapping(value = "/helloagain", method = RequestMethod.GET)
-    public String sayHelloAgain(ModelMap model) {
+    @RequestMapping(value = "/register", method = RequestMethod.GET)
+    public String register(ModelMap model) {
         model.addAttribute("greeting", "Hello World Again, from Spring 4 MVC");
-        return "welcome";
-    } */
+        return "register_tmp";
+    }
   }
