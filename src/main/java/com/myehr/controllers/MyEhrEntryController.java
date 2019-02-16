@@ -73,4 +73,16 @@
         model.addAttribute("greeting", "Hello World Again, from Spring 4 MVC");
         return "register_tmp";
     }
+
+      @RequestMapping(value = "/registerSubmit", method = RequestMethod.POST)
+      public String registerSubmit( @RequestParam Map<String, String> modelR) {
+          ModelAndView model=new ModelAndView();
+
+
+          System.out.println(modelR.get("username"));
+
+          return "register_tmp";
+      }
+
+
   }

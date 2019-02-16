@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html lang="en">
 <head>
   <title>pstck-register</title>
@@ -6,10 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css">
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js"></script>
   <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.10/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js"></script>
   <link href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.10/themes/ui-lightness/jquery-ui.css" rel="stylesheet" type="text/css" />
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
    <script>
@@ -60,10 +60,6 @@
                             validators: {
                                 notEmpty: {
                                     message: 'Please supply your phone number'
-                                },
-                                phone: {
-                                    country: 'US',
-                                    message: 'Please supply a vaild phone number with area code'
                                 }
                             }
                         },
@@ -80,31 +76,57 @@
                         city: {
                             validators: {
                                  stringLength: {
-                                    min: 4,
+                                    min: 3,
                                 },
                                 notEmpty: {
                                     message: 'Please supply your city'
                                 }
                             }
                         },
-                        state: {
+                        country: {
                             validators: {
                                 notEmpty: {
-                                    message: 'Please select your state'
+                                    message: 'Please select your country'
                                 }
                             }
                         },
-                        zip: {
-                            validators: {
+                         locality: {
+                             validators: {
                                 notEmpty: {
-                                    message: 'Please supply your zip code'
-                                },
-                                zipCode: {
-                                    country: 'US',
-                                    message: 'Please supply a vaild zip code'
+                                    message: 'Please select your locality'
                                 }
-                            }
-                        },
+                             }
+                         },
+                        username: {
+                              message: 'The username is not valid',
+                              validators: {
+                                        notEmpty: {
+                                         message: 'Please enter your username'
+                                         },
+                                        stringLength: {
+                                        min: 6,
+                                        max: 20
+                                    },
+                                        regexp: {
+                                                regexp: /^[a-zA-Z0-9_\.]+$/
+                                    },
+                              }
+                          },
+                          password: {
+                               message: 'The password is not valid',
+                               validators: {
+                                           notEmpty: {
+                                           message: 'Please enter your password'
+                                           },
+                                           stringLength: {
+                                                       min: 6,
+                                                       max: 20
+                                                       },
+                                                       regexp: {
+                                                           regexp: /^[a-zA-Z0-9_\.]+$/
+                                                       },
+                                                      }
+                                                    },
                         comment: {
                             validators: {
                                   stringLength: {
@@ -175,35 +197,24 @@
 
 <div class="container-fluid">
   <div class="row content">
-    <div class="col-sm-3 sidenav">
+    <div class="col-sm-2 sidenav">
       <h4>PSCTK</h4>
       <ul class="nav nav-pills nav-stacked">
         <li class="active"><a href="#section1">Register</a></li>
 
-        <!--<li><a href="#section2">Friends</a></li>
-            <li><a href="#section3">Family</a></li>
-            <li><a href="#section3">Photos</a></li>
-        -->
+
       </ul><br>
-     <!-- <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search Blog..">
-        <span class="input-group-btn">
-          <button class="btn btn-default" type="button">
-            <span class="glyphicon glyphicon-search"></span>
-          </button>
-        </span>
-      </div> -->
     </div>
 
-    <div class="col-sm-9">
+    <div class="col-sm-7">
      <h4><small>Register</small></h4>
      <div class="container">
 
-         <form class="well form-horizontal" action=" " method="post"  id="register_form">
+         <form class="well form-horizontal" action="<c:url value='/registerSubmit' />" method="post"  id="register_form">
      <fieldset>
 
      <!-- Form Name -->
-     <legend>Contact Us Today!</legend>
+     <!-- <legend>Contact Us Today!</legend> -->
 
      <!-- Text input-->
 
@@ -280,63 +291,16 @@
      <!-- Select Basic -->
 
      <div class="form-group">
-       <label class="col-md-4 control-label">State</label>
+       <label class="col-md-4 control-label">Country</label>
          <div class="col-md-4 selectContainer">
          <div class="input-group">
              <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-         <select name="state" class="form-control selectpicker" >
-           <option value=" " >Please select your state</option>
+         <select name="country" class="form-control selectpicker" >
+           <option value=" " >Please select your country</option>
            <option>Alabama</option>
            <option>Alaska</option>
            <option >Arizona</option>
-           <option >Arkansas</option>
-           <option >California</option>
-           <option >Colorado</option>
-           <option >Connecticut</option>
-           <option >Delaware</option>
-           <option >District of Columbia</option>
-           <option> Florida</option>
-           <option >Georgia</option>
-           <option >Hawaii</option>
-           <option >daho</option>
-           <option >Illinois</option>
-           <option >Indiana</option>
-           <option >Iowa</option>
-           <option> Kansas</option>
-           <option >Kentucky</option>
-           <option >Louisiana</option>
-           <option>Maine</option>
-           <option >Maryland</option>
-           <option> Mass</option>
-           <option >Michigan</option>
-           <option >Minnesota</option>
-           <option>Mississippi</option>
-           <option>Missouri</option>
-           <option>Montana</option>
-           <option>Nebraska</option>
-           <option>Nevada</option>
-           <option>New Hampshire</option>
-           <option>New Jersey</option>
-           <option>New Mexico</option>
-           <option>New York</option>
-           <option>North Carolina</option>
-           <option>North Dakota</option>
-           <option>Ohio</option>
-           <option>Oklahoma</option>
-           <option>Oregon</option>
-           <option>Pennsylvania</option>
-           <option>Rhode Island</option>
-           <option>South Carolina</option>
-           <option>South Dakota</option>
-           <option>Tennessee</option>
-           <option>Texas</option>
-           <option> Uttah</option>
-           <option>Vermont</option>
-           <option>Virginia</option>
-           <option >Washington</option>
-           <option >West Virginia</option>
-           <option>Wisconsin</option>
-           <option >Wyoming</option>
+
          </select>
        </div>
      </div>
@@ -344,26 +308,41 @@
 
      <!-- Text input-->
 
-     <div class="form-group">
-       <label class="col-md-4 control-label">Zip Code</label>
-         <div class="col-md-4 inputGroupContainer">
-         <div class="input-group">
-             <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-       <input name="zip" placeholder="Zip Code" class="form-control"  type="text">
+    <div class="form-group">
+           <label class="col-md-4 control-label">Locality</label>
+             <div class="col-md-4 selectContainer">
+             <div class="input-group">
+                 <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+             <select name="locality" class="form-control selectpicker" >
+               <option value=" " >Please select your Locality</option>
+               <option>Kunnukara</option>
+               <option>Kuttipuzha</option>
+               <option>Aduvassery</option>
+
+             </select>
+           </div>
          </div>
-     </div>
-     </div>
+         </div>
 
      <!-- Text input-->
      <div class="form-group">
-       <label class="col-md-4 control-label">Website or domain name</label>
+       <label class="col-md-4 control-label">User name</label>
         <div class="col-md-4 inputGroupContainer">
          <div class="input-group">
-             <span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span>
-       <input name="website" placeholder="Website or domain name" class="form-control" type="text">
+             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+       <input name="username" placeholder="User name" class="form-control" type="text">
          </div>
        </div>
      </div>
+      <div class="form-group">
+            <label class="col-md-4 control-label">Password</label>
+             <div class="col-md-4 inputGroupContainer">
+              <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-eye-open"></i></span>
+            <input name="password" placeholder="password" class="form-control" type="password">
+              </div>
+            </div>
+          </div>
 
      <!-- radio checks -->
       <div class="form-group">
