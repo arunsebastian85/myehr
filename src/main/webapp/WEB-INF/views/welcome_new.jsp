@@ -237,40 +237,43 @@
 <div id="about" class="container text-center">
   <h3>PSCTK</h3>
   <p><em>Pravasi Samaritan Charitable Turst Kuttipuzha</em></p>
-  <p>We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>We have created a trust for pravsai's from Kuttipuzha parish.
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
   <br>
   <div class="row">
     <div class="col-sm-4">
-      <p class="text-center"><strong>Name</strong></p><br>
+      <p class="text-center"><strong>President</strong></p><br>
       <a href="#demo" data-toggle="collapse">
         <img src="bandmember.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
       </a>
       <div id="demo" class="collapse">
-        <p>Guitarist and Lead Vocalist</p>
-        <p>Loves long walks on the beach</p>
-        <p>Member since 1988</p>
+        <p>Binoy</p>
+        <p>Oman</p>
+        <p>+3533242342342</p>
       </div>
     </div>
     <div class="col-sm-4">
-      <p class="text-center"><strong>Name</strong></p><br>
+      <p class="text-center"><strong>Finance</strong></p><br>
       <a href="#demo2" data-toggle="collapse">
         <img src="bandmember.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
       </a>
       <div id="demo2" class="collapse">
-        <p>Drummer</p>
-        <p>Loves drummin'</p>
-        <p>Member since 1988</p>
+        <p>Jisso</p>
+        <p>Oman</p>
+        <p>+3533242342342</p>
+       </div>
       </div>
-    </div>
+
     <div class="col-sm-4">
-      <p class="text-center"><strong>Name</strong></p><br>
+      <p class="text-center"><strong>Trustee</strong></p><br>
       <a href="#demo3" data-toggle="collapse">
         <img src="bandmember.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
       </a>
-      <div id="demo3" class="collapse">
-        <p>Bass player</p>
-        <p>Loves math</p>
-        <p>Member since 2005</p>
+        <div id="demo3" class="collapse">
+        <p>Arun</p>
+        <p>Ireland</p>
+        <p>+3533242342342</p>
+        </div>
       </div>
     </div>
   </div>
@@ -281,8 +284,8 @@
   <div class="container">
     <h3 class="text-center">CHURCH</h3>
     <p class="text-center"></p>
-     <div class="thumbnail">
-        <img src="images/church.jpg" alt="Church" width="400" height="300">
+     <div class="thumbnail col-sm-4">
+        <img src="images/church.jpg" alt="Church" width="400" height="700">
      </div>
 
     <!-- <div class="row text-center">
@@ -304,7 +307,7 @@
       </div>
       <div class="col-sm-4">
         <div class="thumbnail">
-          <img src="sanfran.jpg" alt="San Francisco" width="400" height="300">
+          <img src="sanfran.jpg" alt="San Francisco" width="800" height="700">
           <p><strong>San Francisco</strong></p>
           <p>Sunday 29 November 2015</p>
           <button class="btn" data-toggle="modal" data-target="#myModal">Buy Tickets</button>
@@ -352,13 +355,13 @@
 <!-- Container (Contact Section) -->
 <div id="contact" class="container">
   <h3 class="text-center">Contact</h3>
-  <p class="text-center"><em>We love our fans!</em></p>
+  <p class="text-center"><em>We love to hear from you!</em></p>
 
   <div class="row">
     <div class="col-md-4">
-      <p>Fan? Drop a note.</p>
-      <p><span class="glyphicon glyphicon-map-marker"></span>Chicago, US</p>
-      <p><span class="glyphicon glyphicon-phone"></span>Phone: +00 1515151515</p>
+      <p>Drop a note.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span>Dublin, IRE</p>
+      <p><span class="glyphicon glyphicon-phone"></span>Phone: +353 1515151515</p>
       <p><span class="glyphicon glyphicon-envelope"></span>Email: mail@mail.com</p>
     </div>
     <div class="col-md-8">
@@ -380,25 +383,25 @@
     </div>
   </div>
   <br>
-  <h3 class="text-center">From The Blog</h3>
+  <h3 class="text-center">From The Team</h3>
   <ul class="nav nav-tabs">
-    <li class="active"><a data-toggle="tab" href="#home">Mike</a></li>
-    <li><a data-toggle="tab" href="#menu1">Chandler</a></li>
-    <li><a data-toggle="tab" href="#menu2">Peter</a></li>
+    <li class="active"><a data-toggle="tab" href="#home">President</a></li>
+    <li><a data-toggle="tab" href="#menu1">Finance</a></li>
+    <li><a data-toggle="tab" href="#menu2">Trustee</a></li>
   </ul>
 
   <div class="tab-content">
     <div id="home" class="tab-pane fade in active">
-      <h2>Mike Ross, Manager</h2>
-      <p>Man, we've been on the road for some time now. Looking forward to lorem ipsum.</p>
+      <h2>hey to add more</h2>
+      <p>wait to hear more from me</p>
     </div>
     <div id="menu1" class="tab-pane fade">
-      <h2>Chandler Bing, Guitarist</h2>
-      <p>Always a pleasure people! Hope you enjoyed it as much as I did. Could I BE.. any more pleased?</p>
+      <h2>Finance Team</h2>
+      <p>wait to hear more from me</p>
     </div>
     <div id="menu2" class="tab-pane fade">
-      <h2>Peter Griffin, Bass player</h2>
-      <p>I mean, sometimes I enjoy the show, but other times I enjoy other things.</p>
+      <h2>Trustee's voice</h2>
+      <p>More to come up</p>
     </div>
   </div>
 </div>
