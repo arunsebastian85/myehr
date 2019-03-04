@@ -104,7 +104,7 @@
   .navbar {
     font-family: Montserrat, sans-serif;
     margin-bottom: 0;
-    background-color: #2d2d30;
+    background-color: #3399ff;
     border: 0;
     font-size: 11px !important;
     letter-spacing: 4px;
@@ -158,11 +158,11 @@
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+      <!--<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-      </button>
+      </button>-->
       <a class="navbar-brand" href="#myPage">PSCTK</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
@@ -176,12 +176,12 @@
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Merchandise</a></li>
-            <li><a href="#">Extras</a></li>
-            <li><a href="#">Media</a></li>
+            <li><a href="#">Members</a></li>
+            <li><a href="#">By-law</a></li>
+            <li><a href="#">Campaigns</a></li>
           </ul>
         </li>
-        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+        <!--<li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>-->
       </ul>
     </div>
   </div>
@@ -198,26 +198,26 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <img src="ny.jpg" alt="New York" width="1200" height="700">
+        <img src="images/church.jpg" alt="Church1" width="1200" height="700">
         <div class="carousel-caption">
-          <h3>New York</h3>
-          <p>The atmosphere in New York is lorem ipsum.</p>
+          <h3>Church 1</h3>
+          <p>St:Sebastian's Church Kuttipuzha.</p>
         </div>
       </div>
 
       <div class="item">
-        <img src="chicago.jpg" alt="Chicago" width="1200" height="700">
+        <img src="images/church.jpg" alt="Chicago" width="1200" height="700">
         <div class="carousel-caption">
-          <h3>Chicago</h3>
-          <p>Thank you, Chicago - A night we won't forget.</p>
+          <h3>Church 2</h3>
+          <p>Church 2</p>
         </div>
       </div>
 
       <div class="item">
-        <img src="la.jpg" alt="Los Angeles" width="1200" height="700">
+        <img src="images/church.jpg" alt="Los Angeles" width="1200" height="700">
         <div class="carousel-caption">
-          <h3>LA</h3>
-          <p>Even though the traffic was a mess, we had the best time playing at Venice Beach!</p>
+          <h3>Church 3</h3>
+          <p>Church 3</p>
         </div>
       </div>
     </div>
