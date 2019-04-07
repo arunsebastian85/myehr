@@ -5,6 +5,9 @@
   import com.myehr.constants.MessageConstants;
   import com.myehr.constants.RequestUrlConstants;
   import com.myehr.constants.ViewConstants;
+  import com.myehr.dao.UserDao;
+  import com.myehr.model.UserPojo;
+  import org.springframework.beans.factory.annotation.Autowired;
   import org.springframework.stereotype.Controller;
   import org.springframework.ui.Model;
   import org.springframework.ui.ModelMap;
@@ -20,6 +23,8 @@
   @RequestMapping(RequestUrlConstants.indexUrl)
   public class MyEhrEntryController {
 
+      @Autowired
+      UserDao userDao;
       /**
        * The entry point
        * @param model
@@ -77,10 +82,12 @@
       @RequestMapping(value = "/registerSubmit", method = RequestMethod.POST)
       public String registerSubmit( @RequestParam Map<String, String> modelR) {
           ModelAndView model=new ModelAndView();
-
-
+          UserPojo user = new UserPojo();
+          user.setUserName(modelR.get("username"));
+          user.setPassword(modelR.get("password"));
+          user.setEmail(modelR.get("email"));
           System.out.println(modelR.get("username"));
-
+          userDao.insertUser(user);
           return "register_tmp";
       }
 
